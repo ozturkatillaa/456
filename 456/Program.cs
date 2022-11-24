@@ -75,38 +75,38 @@ namespace _456
             //    default: Console.WriteLine("Böyle bir gün yok! hafta içi veya hafta sonu olduğu bulunamaz"); break;
             //}
 
-            urun urun1 = new urun();
-            urun1.fiyat = 50;
-            urun1.isim = "iphone";
-            urun1.magaza = "hepsiburada";
+            //urunl urun1 = new urunl();
+            //urun1.fiyat = 50;
+            //urun1.isim = "iphone";
+            //urun1.magaza = "hepsiburada";
 
-            urun urun2 = new urun();
-            urun2.fiyat = 30;
-            urun2.isim = "samsung";
-            urun2.magaza = "hepsiburada";
-
-
-            urun[] urunler = new urun[] { urun1, urun2 };
-
-            foreach (var uruns in urunler)
-            {
-                Console.WriteLine(uruns.isim);
-            }
-
-            for (int tek = 0; tek < urunler.Length; tek++)
-            {
-                Console.WriteLine(urunler[tek].isim+urunler[tek].magaza);
-            }
-
-            int i = 0;
-            while (i < urunler.Length)
-            {
-                Console.WriteLine(urunler[i].isim);
-                i++;
-            }
+            //urunl urun2 = new urunl();
+            //urun2.fiyat = 30;
+            //urun2.isim = "samsung";
+            //urun2.magaza = "hepsiburada";
 
 
-            Console.ReadLine();
+            //urunl[] urunler = new urunl[] { urun1, urun2 };
+
+            //foreach (var uruns in urunler)
+            //{
+            //    Console.WriteLine(uruns.isim);
+            //}
+
+            //for (int tek = 0; tek < urunler.Length; tek++)
+            //{
+            //    Console.WriteLine(urunler[tek].isim + urunler[tek].magaza);
+            //}
+
+            //int i = 0;
+            //while (i < urunler.Length)
+            //{
+            //    Console.WriteLine(urunler[i].isim);
+            //    i++;
+            //}
+
+
+            //Console.ReadLine();
 
 
             //int i = 1;
@@ -120,6 +120,88 @@ namespace _456
             //{
             //    Console.WriteLine(i);
             //}
+
+            string[] meyveler = new string[] { "portakal", "mugla" };
+
+            product urun1 = new product();
+            urun1.adi = "elma";
+            urun1.fiyatı = 15;
+            urun1.acıklama = "amasya elması";
+
+            product urun2 = new product();
+            urun2.adi = "karpuz";
+            urun2.fiyatı = 20;
+            urun2.acıklama = "iyi";
+
+            product[] urunler = new product[] { urun1, urun2 };
+
+            foreach (product uruns in urunler)
+            {
+                Console.WriteLine(uruns.adi+"\n"+uruns.acıklama);
+                Console.WriteLine("--------------");
+            }
+            sepetmanager sepeteekle = new sepetmanager();
+            sepeteekle.ekle(urun1);
+            matematik islem1 = new matematik();
+            islem1.topla(6, 3);
+            for(var i = 0; i < 4; i++)
+            {
+                islem1.topla(6, 3);
+            }
+            sepetmanager sepeteekle2 = new sepetmanager();
+            sepeteekle2.ekle2("armut", "yesil armut", 12,7);
+            sepeteekle2.ekle2("elma", "yesil elma", 13,8);
+            sepeteekle2.ekle2("portkal", "taze", 14,9);
+            islem1.topla2(20,1);
+            Console.WriteLine(islem1.topla3(50, 20));
+
+            string[] studentts = new string[3] { "ali", "ayse", "ati" };
+            foreach (var item in studentts)
+            {
+                Console.WriteLine(item);
+            }
+
+            musteri newmusteri = new musteri();
+            newmusteri.adı = "ati";
+            newmusteri.soyadı = "soyati";
+            newmusteri.sehir = "ayt";
+            newmusteri.id = 8;
+
+            musyerimanager musteriekle = new musyerimanager();
+            musteriekle.ekle(newmusteri);
+            musteriekle.listele(newmusteri);
+            musteriekle.sil(newmusteri);
+
+
+
+            Dictionary<int, string> Ogrenci = new Dictionary<int, string>();
+            Ogrenci.Add(134, "Tolga Demirer");
+            Ogrenci.Add(158, "Ümit Özkan");
+            Ogrenci.Add(115, "Kadir Aydemir");
+            Ogrenci.Add(174, "Cemal Çiftçi");
+            Console.Write("Öğrenci No Giriniz:");
+            int No = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine(Ogrenci[No]);
+            }
+            catch
+            {
+                Console.WriteLine("Öğrenci Bulunamadı.");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadLine();
         }
         //static void Add()
         //{

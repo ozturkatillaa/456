@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace _456
 {
-    class urun
+    class urunl
     {
         public int fiyat { get; set; }
         public string isim { get; set; }
         public string magaza { get; set; }
+        public string stok { get; set; }
     }
 }
